@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kershaw County Democratic Party</title>
+<link rel="icon" href="Images/KCDP Logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=[GOOGLE_ANALYTICS_ID]"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', '[GOOGLE_ANALYTICS_ID]');
+</script>
+<link rel="stylesheet" type="text/css" href="general.css" />
+</head>
+<body>
+
+<!-- nav -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="Images/KCDP Logo.png" alt="Kershaw County Democratic Party Logo">
+    <div class="nav-logo-text">
+      <div class="name">KERSHAW COUNTY DEMOCRATIC PARTY</div>
+      <div class="region">Camden · Elgin · Bethune · Lugoff · Westville · Boykin · Cassatt · Liberty Hill</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="Leadership.html">Leadership</a>
+    <a href="Volunteer.html">Volunteer</a>
+    <a href="Bylaws.html">Bylaws</a>
+    <a href="Elected-Officials.html">Elected Officials</a>
+    <a href="Candidates.html">Candidates</a>
+    <a href="Young-Democrats.html">Young Democrats</a>
+    <a href="https://scvotes.gov/voters/register-to-vote/" target="_blank" class="cta">Register to Vote</a>
+  </div>
+  <button class="hamburger" onclick="document.getElementById('navOverlay').classList.add('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- mobile nav -->
+<div class="nav-overlay" id="navOverlay">
+  <button class="nav-overlay-close" onclick="document.getElementById('navOverlay').classList.remove('open')">✕</button>
+  <a href="Leadership.html"    onclick="document.getElementById('navOverlay').classList.remove('open')">Leadership</a>
+  <a href="Volunteer.html" onclick="document.getElementById('navOverlay').classList.remove('open')">Volunteer</a>
+  <a href="Bylaws.html"   onclick="document.getElementById('navOverlay').classList.remove('open')">Bylaws</a>
+  <a href="Elected-Officials.html"    onclick="document.getElementById('navOverlay').classList.remove('open')">Elected Officials</a>
+  <a href="Candidates.html"     onclick="document.getElementById('navOverlay').classList.remove('open')">Candidates</a>
+  <a href="Young-Democrats.html"  onclick="document.getElementById('navOverlay').classList.remove('open')">Young Democrats</a>
+  <a href="https://scvotes.gov/voters/register-to-vote/" target="_blank" class="cta">Register to Vote</a>
+</div>
+
+<!-- introduction -->
+<section class="introduction" id="home">
+  <div class="introduction-left">
+    <div class="introduction-tag"><span class="dot"></span>Liberté, Égalité, Fraternité</div>
+    <h1>Horses,<br>Sweet Tea,<br><em>& Community</em></h1>
+    <p class="introduction-sub">Building a stronger Kershaw County through grassroots organizing, community engagement, voter outreach, and electing Democrats at every level in South Carolina.</p>
+    <div class="introduction-btns">
+      <a href="#join" class="btn btn-gold">Join Us →</a>
+      <a href="https://scvotes.gov/voters/register-to-vote/" target="_blank" class="btn btn-ghost">Register to Vote</a>
+    </div>
+    <div class="introduction-footnote">
+      <strong>"Fighting For A New Carolina"</strong><br>
+    </div>
+  </div>
+  <div class="introduction-right">
+    <!-- update these stats with real numbers from your state -->
+    <a href="#voter">
+      <div class="stat-card red">
+        <div class="label">Are You Register To Vote?</div>
+        <div class="value">Voter Resources</div>
+        <div class="desc">Everything you need!</div>
+      </div>
+    </a>
+    <a href="#events">
+      <div class="stat-card blue">
+        <div class="label">What Is Going On Around Town?</div>
+        <div class="value">Upcoming Events</div>
+        <div class="desc">Community events, candidate forums, and volunteer opportunities.</div>
+      </div>
+    </a>
+    <a href="#blog">
+      <div class="stat-card gold">
+        <div class="label">What's Up Doc?</div>
+        <div class="value">Party News</div>
+        <div class="desc">State, local, and party news.</div>
+      </div>
+    </a>
+    <a href="#contact">
+      <div class="stat-card green">
+        <div class="label">I Have A Question?</div>
+        <div class="value">Contact Us</div>
+        <div class="desc">Connect, engage, and organize.</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- scrolling ticker -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="sep">🌴</span>Register to Vote</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Camden</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Get Involved</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Elgin</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Democratic Women</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Bethune</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Register. Organize. Win.</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Lugoff</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Young Democrats</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Westville</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Democratic Men</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Boykin</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Principles</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Cassatt</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Change</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Liberty Hill</span>
+  </div>
+</div>
+
+<!-- about -->
+<section class="section light" id="about">
+  <div class="container">
+    <div class="origin-wrap">
+      <div>
+        <div class="origin-label">Who Are We?</div>
+        <div class="origin-big">The Kershaw<br>County<br><span>Democratic Party</span></div>
+      </div>
+      <div class="origin-text">
+        <p>We are the people of Kershaw County, from Camden, Elgin, Bethune, and every community in between. These are the places that shaped us, raised us, and gave us a home. We believe South Carolina is worth fighting for.</p>
+
+        <p>Whether you're a lifelong Democrat, a liberal, a progressive, or a conservative who simply wants a better future for our community, there is a place for you here. From young people casting their first vote to working adults building their lives, we’re bringing a new Carolina into existence.</p>
+
+        <p>Kershaw County has deep roots, a proud history, and neighbors who show up for one another. We’re carrying that spirit forward, organizing our communities, registering voters, supporting Democratic candidates, and making sure every voice has a seat at the table.</p>
+        
+        <div class="origin-quote">"Life, Liberty and the pursuit of Happiness." - The Declaration of Independence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- platform -->
+<section class="section dark" id="platform">
+  <div class="container">
+    <div class="flex-between mb-36">
+      <div>
+        <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Our Platform</span></div>
+        <h2 class="heading" class="h-lg h-white" style="color: white;">What We're Fighting For</h2>
+      </div>
+      <a href="https://scdp.org/resources/scdp-platform/" target="_blank" class="btn btn-outline-gold btn-sm">Full SCDP Platform →</a>
+    </div>
+    <div class="platform-grid">
+      <div class="pillar">
+        <span class="pillar-icon">🏠</span>
+        <h3>Affordability</h3>
+        <span class="pillar-tag">Housing · Childcare · Healthcare</span>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">💵</span>
+        <h3>Jobs & Wages</h3>
+        <span class="pillar-tag">Fair Pay · Good Jobs · Workers' Rights</span>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">📚</span>
+        <h3>Education</h3>
+        <span class="pillar-tag">Teachers · Schools · Colleges</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- leadership -->
+<section class="section white" id="leadership">
+  <div class="container">
+    <div class="eyebrow blue">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Our Workhorses</span>
+    </div>
+    <h2 class="heading" class="h-lg h-dark">County Party Leadership</h2>
+    <div class="county-grid">
+      <a href="Leadership.html" class="county-link">
+        <div class="county-card">
+          <div class="county-card-banner">🌴</div>
+          <div class="county-card-body">
+            <div class="county-name">Party Leadership</div>
+            <p>The volunteers spending their time and effort to lead and organize our communities, to get principled candidates elected.</p>
+          </div>
+        </div>
+      </a>
+      <a href="Elected-Officials.html" class="county-link">
+        <div class="county-card">
+          <div class="county-card-banner">🫏</div>
+          <div class="county-card-body">
+            <div class="county-name">Elected Officials</div>
+            <p>Our locally elected officials working for us and who are committed to making Kershaw County a better place to live and work.</p>
+          </div>
+        </div>
+      </a>
+      <a href="Candidates.html" class="county-link">
+        <div class="county-card">
+          <div class="county-card-banner">🌴</div>
+          <div class="county-card-body">
+            <div class="county-name">Candidates</div>
+            <p>Our neighbors stepping up to serve, who bring a commitment to liberty, equality, opportunity, and the people of Kershaw County.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- events -->
+<section class="section light" id="events">
+  <div class="container">
+    <div class="events-header">
+      <div>
+        <div class="eyebrow">
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-text">Get Active</span>
+        </div>
+        <h2 class="heading" class="h-lg h-dark">Upcoming Events</h2>
+      </div>
+      <a href="https://www.mobilize.us/?org_ids=9634" target="_blank" class="btn btn-outline btn-sm">Full Mobilize Calendar →</a>
+    </div>
+    <div class="event-grid">
+      <!-- SC-05 YOUNG DEMOCRATS ONLINE MEETING -->
+      <div class="event-card">
+        <div class="ec-banner gold">
+          <div class="ec-month">AUG</div>
+          <div class="ec-day">31</div>
+          <span class="ec-type">Candidate Meeting</span>
+        </div>
+        <div class="ec-body">
+          <h3>SC-05 Young Democrats Online Meeting</h3>
+          <p>The Young Democrats of South Carolina are inviting all young Democrats aged 16-35 in the SC 5th Congressional District to join us for an online meeting with Congressional Candidate Mallory Dittmer!</p>
+          <div class="ec-meta">
+            <span>🕕 6:30PM - 8:00PM</span>
+            <span>💻 Virtual Event</span>
+          </div>
+          <div class="event-btns" style="width: 50%;">
+            <a href="https://www.mobilize.us/youngdemocratsofsouthcarolina/event/984234/" target="_blank" class="primary">RSVP →</a>
+          </div>
+        </div>
+      </div>
+      <!-- CONCERNED CITIZENS OF KERSHAW COUNTY - CANDIDATE FORUM -->
+      <div class="event-card">
+        <div class="ec-banner blue">
+          <div class="ec-month">SEPT</div>
+          <div class="ec-day">17</div>
+          <span class="ec-type">Candidate Forum</span>
+        </div>
+        <div class="ec-body">
+          <h3>Concerned Citizens of Kershaw County - Candidate Forum</h3>
+          <p>Hear from Democrat & Republic candidates on issues facing our communities and South Carolina.</p>
+          <div class="ec-meta">
+            <span>🕕 6:00PM - 8:00PM</span>
+            <span>📍 Liberty Hall - Revolutionary War Center - 212 Broad St, Camden, SC 29020 </span>
+          </div>
+          <div class="event-btns blue" style="width: 50%;">
+            <a href="https://www.facebook.com/concernedcitizensofkc" target="_blank" class="secondary">Details →</a>
+          </div>
+        </div>
+      </div>
+      <!-- JERMAIN JOHNSON - MEET & GREET FUNDRAISER -->
+      <div class="event-card featured">
+        <div class="ec-banner">
+          <div class="ec-month">SEPT</div>
+          <div class="ec-day">18</div>
+          <span class="ec-type">⭐ Fundraiser</span>
+        </div>
+        <div class="ec-body">
+          <h3>Jermain Johnson - Meet & Great Fundraiser</h3>
+          <p>SEE EVENT FLYER TO RSVP BY SEPTEMBER 8TH IF YOU PLAN TO ATTEND.</p>
+          <div class="ec-meta">
+            <span>🕕 5:00PM - 7:00PM</span>
+            <span>📍 Liberty Hall - Revolutionary War Center - 212 Broad Street, Camden, SC 29020</span>
+          </div>
+          <div class="event-btns" style="width: 50%;">
+            <a href="Documents/Event-InviteFlyer2026Johnson.pdf" target="_blank" class="secondary">Details →</a>
+          </div>
+        </div>
+      </div>
+      <!-- RECURRING - GENERAL MEETING -->
+      <div class="event-card">
+        <div class="ec-banner green">
+          <div class="ec-month">Recurring</div>
+          <div class="ec-day">Every 2nd Saturday</div>
+          <span class="ec-type">General Meeting</span>
+        </div>
+        <div class="ec-body">
+          <h3>Kershaw County Democratic Party - General Meeting</h3>
+          <div class="ec-meta">
+            <span>🕕 11:00AM - 12:00PM Executive Meeting</span>
+            <span>🕕 12:00PM - 1:00PM General Meeting</span>
+            <span>📍 Camden Vitality Center - 906 Lyttleton St, Camden, SC 29020</span>
+          </div>
+        </div>
+      </div>
+      <!-- RECURRING - WOMENS MEETING -->
+      <div class="event-card">
+        <div class="ec-banner red">
+          <div class="ec-month">Recurring</div>
+          <div class="ec-day">Every XXTH </br> MONDAY</div>
+          <span class="ec-type">General Meeting</span>
+        </div>
+        <div class="ec-body">
+          <h3>Kershaw County Democratic Women - General Meeting</h3>
+          <div class="ec-meta">
+            <span>🕕 XX:XXPM - XX:XXPM</span>
+            <span>📍 Books on Broad - 944 Broad St, Camden, SC 29020</span>
+          </div>
+        </div>
+      </div>
+      <!-- EVENT BACKUP
+      <div class="event-card featured">
+        <div class="ec-banner">
+          <div class="ec-month">[MON]</div>
+          <div class="ec-day">[DD]</div>
+          <span class="ec-type">⭐ [Event Type]</span>
+        </div>
+        <div class="ec-body">
+          <h3>[Featured Event Name]</h3>
+          <p>[Description of your featured fundraiser, gala, or special event]</p>
+          <div class="ec-meta">
+            <span>🕕 [Time]</span>
+            <span>📍 [Location]</span>
+          </div>
+          <span class="ec-badge">🗳️ Voter Registration On-Site</span>
+          <div class="event-btns">
+            <a href="[TICKET_URL]" target="_blank" class="primary">Get Tickets →</a>
+            <a href="[EVENT_PAGE_URL]" target="_blank" class="secondary">Details →</a>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+    
+    <div class="mobilize-bar">
+      <div>
+        <p>📅 Calendar Managed by the Kershaw County Democratic Party</p>
+        <small>Have an upcoming event you are planning? Let us know!</small>
+      </div>
+      <a href="https://forms.gle/wuBX5fwAFGi1aSs77" target="_blank" class="btn btn-navy btn-sm">Submit an Event →</a>
+    </div>
+  </div>
+</section>
+
+<!-- join -->
+<section class="section navy" id="join">
+  <div class="container">
+    <div class="join-wrap">
+
+      <!-- LEFT SIDE -->
+      <div>
+        <div class="eyebrow">
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-text">Get Involved</span>
+        </div>
+
+        <h2>
+          Change Starts<br>
+          Here In<br>
+          <span>Kershaw County.</span>
+        </h2>
+
+        <p>
+          Are you a resident of Kershaw County and care about Life, Liberty,
+          and the Pursuit of Happiness? Join the Kershaw County Democratic
+          Party today!
+        </p>
+
+        <ul class="join-perks">
+          <li>Community Events and Socials</li>
+          <li>Voter Registration Drives</li>
+          <li>Candidate Forums and Town Halls</li>
+          <li>Canvassing and Phone Banking Opportunities</li>
+          <li>Get Involved with Local Government</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT SIDE: FORM -->
+      <div class="join-form-wrap">
+
+        <h3>Join the Kershaw County Democratic Party</h3>
+
+        <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSfXV3FO8YQFcQzAiVRNMeFLuqgHX2kbHuJEwxz2FW7z1fYp3w/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+          <div class="field">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="entry.515277337" placeholder="Your first name" maxlength="30" required >
+          </div>
+
+          <div class="field">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="entry.830849319" placeholder="Your last name" maxlength="30" required >
+          </div>
+
+          <div class="field">
+            <label for="last-name">Email</label>
+            <input type="text" id="email" name="entry.1242446096" placeholder="your@email.com" maxlength="30" required >
+          </div>
+
+          <div class="field">
+            <label for="last-name">Phone (Optional)</label>
+            <input type="text" id="phone" name="entry.1983472911" placeholder="XXX-XXX-XXXX" maxlength="30">
+          </div>
+
+          <div class="field">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="entry.380339507" placeholder="Your address" maxlength="30">
+          </div>
+
+          <!-- 
+          <div class="field">
+            <label for="status">Status</label>
+            <select id="status" name="entry.299159923">
+              <option value="" disabled selected>Select your status</option>
+              <option value="Student">Student</option>
+              <option value="Alumni">Alumni</option>
+              <option value="Faculty">Faculty</option>
+              <option value="Friend">Friend</option>
+            </select>
+          </div>
+          -->
+
+          <button
+            type="submit"
+            class="btn btn-gold btn-full mt-8"
+          >
+            Join The Movement →
+          </button>
+
+        </form>
+
+
+        <!-- HIDDEN GOOGLE FORM IFRAME -->
+        <iframe
+          name="hidden_iframe"
+          id="hidden_iframe"
+          style="display:none;"
+          onload="if(submitted) { formSubmitted(); }"
+        ></iframe>
+
+        <!-- SUCCESS MESSAGE -->
+        <p id="success-message" class="success" style="display:none; margin-top: 20px;">
+          Thank you for joining the movement! A great way to stay up to date on all Kershaw County Democratic events is to follow us on <a href="https://www.facebook.com/KershawCountyDemocrats/" target="_blank">Facebook</a> or <a href="https://www.instagram.com/KershawCountyDemocrats/" target="_blank">Instagram</a>!
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script>
+  var submitted = false;
+
+  function formSubmitted() {
+    document.getElementById("gform").style.display = "none";
+    document.getElementById("success-message").style.display = "block";
+  }
+</script>
+
+<!-- voter resources -->
+<section class="section white" id="voter">
+  <div class="container">
+    <div class="eyebrow blue">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Make It Count</span>
+    </div>
+    <h2 class="heading" class="h-lg h-dark">Voter Resources</h2>
+    <div class="voter-grid">
+      <div class="voter-card">
+        <div class="voter-icon vi-blue">📝</div>
+        <h3>Register to Vote</h3>
+        <p>A step-by-step guide on how to register to vote.</p>
+        <a href="https://scvotes.gov/voters/register-to-vote/" target="_blank">Register Now →</a>
+      </div>
+      <div class="voter-card">
+        <div class="voter-icon vi-yellow">📍</div>
+        <h3>Find Your Polling Place</h3>
+        <p>Find your polling location on election day.</p>
+        <a href="https://vrems.scvotes.sc.gov/Voter/Login?PageMode=PollingPlace" target="_blank">Find My Polling Place →</a>
+      </div>
+      <div class="voter-card">
+        <div class="voter-icon vi-pink">📅</div>
+        <h3>Election Dates</h3>
+        <p>Stay ahead of registration deadlines and election dates.</p>
+        <a href="https://scvotes.gov/elections-statistics/general-election-calendars/" target="_blank">View Calendar →</a>
+      </div>
+      <div class="voter-card">
+        <div class="voter-icon vi-blue">🪪</div>
+        <h3>Voter ID Requirements</h3>
+        <p>What ID do you need to bring on election day?</p>
+        <a href="https://scvotes.gov/voters/photo-id-requirements/" target="_blank">Learn More →</a>
+      </div>
+      <div class="voter-card">
+        <div class="voter-icon vi-purple">🤝</div>
+        <h3>Volunteer at the Polls</h3>
+        <p>Help your neighbors vote. Sign up to be a poll worker.</p>
+        <a href="https://scvotes.gov/poll-managers/apply-to-be-a-poll-manager/" target="_blank">Apply Now →</a>
+      </div>
+      <div class="voter-card">
+        <div class="voter-icon vi-lavender">🎓</div>
+        <h3>Student Voters</h3>
+        <p>Are you a College student? Learn how to register and vote.</p>
+        <a href="https://scvotes.gov/voters/students/" target="_blank">Student Voter Info →</a>
+      </div>
+      <!-- absentee deadline card — update with your next major election -->
+      <div class="voter-card deadline">
+        <div class="voter-icon vi-red">📬</div>
+        <h3>2026 ABSENTEE VOTING</h3>
+        <div class="deadline-block">
+          <div class="dlabel">⚠️ Deadline to Request Absentee Ballot</div>
+          <div class="dvalue">Oct 23rd, 2026 at 5:00pm</div>
+        </div>
+        <div class="deadline-block">
+          <div class="dlabel">⚠️ Deadline for Voter Registration Office to Receive Ballot</div>
+          <div class="dvalue">Nov 3rd, 2026 at 7:00pm</div>
+        </div>
+        <div class="deadline-cta">
+          <a href="https://scvotes.gov/voters/absentee-voting/" target="_blank">Absenttee Info →</a>
+        </div>
+      </div>
+      <!-- election deadline card — update with your next major election -->
+      <div class="voter-card deadline">
+        <div class="voter-icon vi-red">🗳️</div>
+        <h3>2026 GENERAL ELECTION</h3>
+        <div class="deadline-block">
+          <div class="dlabel">Election Day</div>
+          <div class="dvalue">November 3rd, 2026</div>
+          <div class="dnote">Polls open 7:00am - 7:00pm</div>
+        </div>
+        <div class="deadline-block">
+          <div class="dlabel">⚠️ Last Day to Register</div>
+          <div class="dvalue">October 4th, 2026</div>
+          <div class="dnote">Online registration ends 11:59pm</div>
+        </div>
+        <div class="deadline-cta">
+          <a href="https://vrems.scvotes.sc.gov/Voter/Login/VoterInfo" target="_blank">Check Your Registration →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- news -->
+<section class="section bg-dark-blue" id="blog">
+  <div class="container">
+    <div class="flex-between mb-36">
+      <div>
+        <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Staying Up To Date</span></div>
+        <h2 class="heading" class="h-lg h-white" style="color: white;">News &amp; Updates</h2>
+      </div>
+      <a href="https://substack.com/@kershawcountydemocrats" target="_blank" class="btn btn-outline-gold btn-sm">Substack Articles →</a>
+    </div>
+    <div class="blog-wrap">
+      <div class="blog-main">
+        <div class="blog-main-img"><span class="tag">Help Needed!</span></div>
+        <div class="blog-main-body">
+          <h3>How To Become A Kershaw County Democratic Party Substack Contributor</h3>
+          <p>Learn how you can become a Kershaw County Democratic Party Substack Contributor and share your ideas, perspectives, and community stories with fellow Democrats across Kershaw County.</p>
+          <div class="meta"><span>📅 Aug 23rd 2026</span><span>✍️ KCDP Communication Committee</span></div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScitnsKqq1kyL7NLSP7EzQLTbBuHKd9ytjZ5srKs5QCx-iGAg/viewform" target="_blank">Become A Contributor →</a>
+        </div>
+      </div>
+      <div class="blog-sidebar">
+        <!-- NEWS #1 -->
+        <a href="https://kershawcountydemocrats.substack.com/p/first-in-the-nation?r=8z5kx2&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank" class="blog-mini-link">
+          <div class="blog-mini">
+          <div class="blog-mini-thumb blue"></div>
+            <div>
+              <div class="tag">SCDP News</div>
+              <h4>First In The Nation</h4>
+              <div class="date">Aug 17th 2026</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- NEWS #2 -->
+        <a href="https://scdp.org/press-release/statement-from-the-south-carolina-democratic-party-on-the-passage-of-a-state-budget/" target="_blank" class="blog-mini-link">
+          <div class="blog-mini">
+          <div class="blog-mini-thumb red"></div>
+            <div>
+              <div class="tag">SCDP Statement</div>
+              <h4>Statement From The SC Democratic Party On The Passage Of A State Budget</h4>
+              <div class="date">Aug 11th 2026</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- NEWS #3 -->
+        <a href="https://www.wistv.com/2026/07/30/jermaine-johnson-announce-running-mate-sc-governors-race/" target="_blank" class="blog-mini-link">
+          <div class="blog-mini">
+          <div class="blog-mini-thumb gold"></div>
+            <div>
+              <div class="tag">State News</div>
+              <h4>WIS 10 News - Jermaine Johnson Names Sam Skardon As Running Mate</h4>
+              <div class="date">Jul 30th 2026</div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- NEWS #4 -->
+        <a href="https://scdp.org/press-release/statement-from-south-carolina-democratic-party-chair-christale-spain-on-the-dnc-rules-and-bylaws-committee-decision-to-select-south-carolina-to-lead-off-the-2028-democratic-presidential-primary/" target="_blank" class="blog-mini-link">
+          <div class="blog-mini">
+          <div class="blog-mini-thumb green"></div>
+            <div>
+              <div class="tag">SCDP Statement</div>
+              <h4>Statement On South Carolina Leading The 2028 Democratic Presidential Primary</h4>
+              <div class="date">Jul 24th 2026</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- newsletter -->
+<section class="section light" id="newsletter">
+  <div class="nl-inner">
+    <div class="eyebrow blue center">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Stay Connected</span>
+    </div>
+    <h2>Subscribe To Our<span> Substack</span></h2>
+    <p>Chapter updates, event alerts, local news, and voting reminders. No spam — just important news.</p>
+    <div class="nl-form">
+      <input type="email" id="nl-email" placeholder="Your email address...">
+       <button class="btn btn-navy" onclick="window.open('https://kershawcountydemocrats.substack.com/subscribe?email='+document.getElementById('nl-email').value,'_blank')">Subscribe →</button>
+    </div>
+    <p class="nl-note">Powered by Substack · Unsubscribe at any time.</p>
+  </div>
+</section>
+
+<!-- donate -->
+<section class="section bg-red-grad" id="donate">
+  <div class="container">
+    <div class="donate-inner">
+      <div>
+        <h2>$20.26 for <span>2026.</span></h2>
+        <p>A $20.26 contribution to the Kershaw County Democratic Party goes a long way to helping to support our shared democratic cause: organizing events, heping with voter registration, and conducting grassroots voter outreach.</p>
+        
+        </br>
+
+        <div class="donate-btns">
+          <a href="https://secure.actblue.com/donate/kershaw-county-democratic-party-1" target="_blank" class="btn btn-gold">Donate via ActBlue →</a>
+        </div>
+      </div>
+    
+      <!-- 
+      
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- contact -->
+<section class="section white" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="eyebrow blue"><div class="eyebrow-line"></div><span class="eyebrow-text">Reach Out To Us</span></div>
+        <h2 class="heading" class="h-md h-dark">We'd Love to Hear From You</h2>
+        <p>Questions about membership, events, or getting involved? Let us know! A volunteer will be in contact shortly.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:kershawscdems@gmail.com" class="contact-link">KershawSCDems@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <h4>Mailing Address</h4>
+              <p>PO Box 65, Camden, SC 29020</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📱</div>
+            <div>
+              <h4>Facebook</h4>
+              <p><a href="https://www.facebook.com/KershawCountyDemocrats/">@KershawCountyDemocrats</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📸</div>
+            <div>
+              <h4>Instagram</h4>
+              <p><a href="https://www.instagram.com/KershawCountyDemocrats/">@KershawCountyDemocrats</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+
+        <form id="contact-form" action="https://formspree.io/f/mljrkzdk" method="POST">
+
+          <div class="cfield">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Your full name" required>
+          </div>
+
+          <div class="cfield">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </div>
+
+          <div class="cfield">
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="Email subject">
+          </div>
+
+          <div class="cfield">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell us what's on your mind..."required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-navy btn-full">Send Message →</button>
+        </form>
+
+        <div id="contact-success" style="display: none; text-align: center; padding: 30px;">
+          <h3>Thank You!</h3>
+          <p>Your message has been sent successfully. We'll get back to you soon. In the meantime, a great way to stay up to date on all Kershaw County Democratic events is to follow us on <a href="https://www.facebook.com/KershawCountyDemocrats/" target="_blank" style="color: black; font-weight: bold;">Facebook</a> or <a href="https://www.instagram.com/KershawCountyDemocrats/" target="_blank" style="color: black; font-weight: bold;">Instagram</a>!</p>
+        </div>
+      </div>
+
+    <script>
+      const contactForm = document.getElementById("contact-form");
+      const contactSuccess = document.getElementById("contact-success");
+
+      contactForm.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        const submitButton = contactForm.querySelector("button[type='submit']");
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+      try {
+        const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        // Hide the form
+        contactForm.style.display = "none";
+        // Show thank-you message
+        contactSuccess.style.display = "block";
+      } else {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Message →";
+        alert("Something went wrong. Please try again.");
+      }
+        } catch (error) {
+          submitButton.disabled = false;
+          submitButton.textContent = "Send Message →";
+          alert("Something went wrong. Please try again.");
+        }
+      });
+    </script>
+    </div>
+  </div>
+</section>
+
+<!-- social links -->
+<div class="social-bar">
+  <div class="social-bar-inner">
+    <span class="social-bar-label">Follow Us On:</span>
+    <a href="https://www.facebook.com/KershawCountyDemocrats/" target="_blank" class="social-link">📱 Facebook</a>
+    <a href="https://www.facebook.com/groups/KershawCountyDemocraticWomen" target="_blank" class="social-link">📱 Facebook Group</a>
+    <a href="https://www.instagram.com/KershawCountyDemocrats/" target="_blank" class="social-link">📸 Instagram</a>
+    <a href="https://KershawCountyDemocrats.substack.com/" target="_blank" class="social-link">📝 Substack</a>
+  </div>
+</div>
+
+<!-- footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="name">Kershaw County Democratic Party</div>
+        <span class="region">Camden · Elgin · Bethune · Lugoff · Westville · Boykin · Cassatt · Liberty Hill</span>
+        <p>Building a stronger Kershaw County through grassroots organizing, community engagement, voter outreach, and electing Democrats at every level in South Carolina.</p>
+        <div class="tagline">"Life, Liberty and the pursuit of Happiness." - The Declaration of Independence</div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="Leadership.html">Leadership</a>
+        <a href="Bylaws.html">Bylaws</a>
+        <a href="Elected-Officials.html">Elected Officials</a>
+        <a href="Candidates.html">Our Candidates</a>
+        <a href="Young-Democrats.html">Young Democrats</a>
+        <a href="index.html #contact">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <a href="index.html #join">Join Us!</a>
+        <a href="Volunteer.html" target="_blank">Volunteer</a>
+        <a href="Volunteer.html" target="_blank">Join A Committee</a>
+        <a href="https://secure.actblue.com/donate/kershaw-county-democratic-party-1" target="_blank">Donate via ActBlue</a>
+        <a href="https://kershawcountydemocrats.substack.com/subscribe" target="_blank">Newsletter</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="https://scvotes.gov/voters/register-to-vote/" target="_blank">Register to Vote</a>
+        <a href="index.html #voter" target="_blank">Voter Resources</a>
+        <a href="https://scdp.org/" target="_blank">South Carolina Democratic Party</a>
+        <a href="https://www.youngdemssc.org/" target="_blank">South Carolina Young Democrats</a>
+        <a href="https://www.kershaw.sc.gov/" target="_blank">Kershaw County Government</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>KershawSCDems@gmail.com | PO Box 65, Camden, SC 29020 | © Kershaw County Democratic Party. All rights reserved.</p>
+      <span><a href="https://www.facebook.com/ConorXRom/" target="_blank" style="color: rgba(255,255,255,0.18);">🛠️ Website Maintained by Conor X. Rom</a></span>
+    </div>
+    <p class="footer-legal">Paid for by the Kershaw County Democratic Party. Affiliated with the South Carolina Democratic Party and the South Carolina Young Democrats. Not authorized by any candidate or candidate's committee.</p>
+  </div>
+</footer>
+
+<!-- mobile bottom bar -->
+<div class="sticky-bar">
+  <a href="[REGISTER_VOTE_URL]" target="_blank" class="s-reg">Register to Vote</a>
+  <a href="#join" class="s-join">Join Us →</a>
+</div>
+
+<script>
+// close mobile menu when clicking outside
+document.getElementById('navOverlay').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('open');
+});
+
+// substack rss auto-load — replace [SUBSTACK_URL] before deploying
+async function loadPosts() {
+  try {
+    const url = '[SUBSTACK_URL]';
+    const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=' + url + '/feed');
+    const data = await res.json();
+    if (!data.items?.length) return;
+    const f = data.items[0];
+    document.querySelector('.blog-main-body h3').textContent = f.title;
+    document.querySelector('.blog-main-body p').textContent = f.description.replace(/<[^>]*>/g,'').substring(0,150) + '...';
+    document.querySelector('.blog-main-body a').href = f.link;
+    const minis = document.querySelectorAll('.blog-mini');
+    for (let i = 0; i < Math.min(4, data.items.length - 1); i++) {
+      const m = minis[i];
+      if (!m) continue;
+      m.querySelector('h4').textContent = data.items[i+1].title;
+      m.onclick = () => window.open(data.items[i+1].link, '_blank');
+    }
+  } catch(e) { /* shows placeholder content if rss fails */ }
+}
+loadPosts();
+</script>
+</body>
+</html>
