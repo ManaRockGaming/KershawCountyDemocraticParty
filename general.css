@@ -240,7 +240,7 @@ nav {
 /* join */
 .join-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; position: relative; }
 /* subtle background donkey */
-.join-wrap::after { content: '🫏'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 180px; opacity: 0.04; pointer-events: none; }
+.join-wrap::after { content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 180px; opacity: 0.04; pointer-events: none; }
 .join-wrap h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(34px, 4vw, 54px); color: #fff; line-height: 0.95; margin-bottom: 12px; }
 .join-wrap h2 span { color: #f9a825; }
 .join-wrap > div > p { color: rgba(255,255,255,0.65); font-size: 15px; line-height: 1.75; }
@@ -259,6 +259,15 @@ nav {
 .field select option { background: var(--navy); }
 .field-note { font-size: 11px; color: rgba(255,255,255,0.35); text-align: center; margin-top: 10px; }
 .success a {color: white; font-weight: bold;}
+
+.fieldwhite { margin-bottom: 14px; }
+.fieldwhite label { display: block; font-size: 9px; font-weight: 700; color: var(--gray); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 5px; }
+.fieldwhite input,
+.fieldwhite select { width: 100%; padding: 11px 13px; border-radius: 8px; background: #fff; border: 1.5px solid rgba(255,255,255,0.13); color: var(--dark); font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; transition: border-color .15s; }
+.fieldwhite input:focus,
+.fieldwhite select:focus { border-color: var(--blue); }
+.fieldwhite input::placeholder { color: var(--dark); }
+.fieldwhite select option { border-color: var(--blue); }
 
 
 /* voter resources */
