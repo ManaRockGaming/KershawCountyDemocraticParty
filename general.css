@@ -208,7 +208,7 @@ nav {
 .event-card { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: #fff; transition: transform .2s, box-shadow .2s; }
 .event-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,60,160,0.08); }
 .ec-banner { padding: 24px; position: relative; overflow: hidden; }
-.ec-banner::after { content: '🌴'; position: absolute; right: 8px; bottom: -4px; font-size: 42px; opacity: 0.14; }
+.ec-banner::after { content: '🫏'; position: absolute; right: 8px; bottom: -4px; font-size: 42px; opacity: 0.30; }
 /* banner color variants */
 .ec-banner.blue   { background: linear-gradient(135deg, var(--navy), var(--blue)); }
 .ec-banner.gold   { background: linear-gradient(135deg, #c98b2a, #f9a825); }
@@ -220,6 +220,22 @@ nav {
 .ec-banner.gold .ec-day { color: var(--dark); }
 .ec-type { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; }
 .ec-banner.gold .ec-type { background: rgba(0,0,0,0.12); color: var(--dark); }
+
+.ec-bannerexternal { padding: 24px; position: relative; overflow: hidden; }
+.ec-bannerexternal::after { content: '🌴'; position: absolute; right: 8px; bottom: -4px; font-size: 42px; opacity: 0.30; }
+.ec-bannerexternal.blue   { background: linear-gradient(135deg, var(--navy), var(--blue)); }
+.ec-bannerexternal.gold   { background: linear-gradient(135deg, #c98b2a, #f9a825); }
+.ec-bannerexternal.red    { background: linear-gradient(135deg, var(--red), #e53935); }
+.ec-bannerexternal.green  { background: linear-gradient(135deg, #1B5E20, #388E3C); }
+.ec-month { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 2px; }
+.ec-bannerexternal.gold .ec-month { color: rgba(0,0,0,0.45); }
+.ec-day { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: #fff; line-height: 1; margin-bottom: 8px; }
+.ec-bannerexternal.gold .ec-day { color: var(--dark); }
+.ec-type { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; }
+.ec-bannerexternal.gold .ec-type { background: rgba(0,0,0,0.12); color: var(--dark); }
+
+
+
 .ec-body { padding: 20px; }
 .ec-body h3 { font-weight: 700; font-size: 14px; color: var(--dark); margin-bottom: 6px; }
 .ec-body p  { font-size: 13px; color: var(--gray); line-height: 1.6; margin-bottom: 12px; }
@@ -332,6 +348,12 @@ nav {
 .donate-btns { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; flex-shrink: 0; }
 .donate-pill { background: rgba(255,255,255,0.14); border: 2px solid rgba(255,255,255,0.25); color: #fff; padding: 10px 18px; border-radius: 8px; font-weight: 700; font-size: 14px; transition: background .15s; }
 .donate-pill:hover { background: rgba(255,255,255,0.25); }
+
+.donate-long { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.donate-long > div { width: 100%; }
+.donate-long h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(28px, 3.5vw, 46px); color: #fff; line-height: 1; }
+.donate-long h2 span { color: #f9a825; }
+.donate-long p { color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.7; margin-top: 6px; max-width: 100%; }
 
 /* newsletter */
 .nl-inner { max-width: 540px; margin: 0 auto; text-align: center; }

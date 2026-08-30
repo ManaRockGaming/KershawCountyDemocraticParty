@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Young Democrats - Kershaw County Democratic Party</title>
+<link rel="icon" href="Images/The Young Democrats of Kershaw County.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=[GOOGLE_ANALYTICS_ID]"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', '[GOOGLE_ANALYTICS_ID]');
+</script>
+<link rel="stylesheet" type="text/css" href="general.css" />
+</head>
+<body>
+
+<!-- nav -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="Images/The Young Democrats of Kershaw County.png" alt="Kershaw County Young Democrats Logo">
+    <div class="nav-logo-text">
+      <div class="name">KERSHAW COUNTY YOUNG DEMOCRATS</div>
+      <div class="region">Camden · Elgin · Bethune · Lugoff · Westville · Boykin · Cassatt · Liberty Hill</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="Leadership.html">Leadership</a>
+    <a href="Volunteer.html">Volunteer</a>
+    <a href="Elected-Officials.html">Elected Officials</a>
+    <a href="Candidates.html">Candidates</a>
+    <a href="Young-Democrats.html">Young Democrats</a>
+    <a href="https://secure.actblue.com/donate/ydsc_kershaw" target="_blank">Donate</a>
+    <a href="https://scvotes.gov/voters/register-to-vote/" target="_blank" class="cta">Register to Vote</a>
+  </div>
+  <button class="hamburger" onclick="document.getElementById('navOverlay').classList.add('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- mobile nav -->
+<div class="nav-overlay" id="navOverlay">
+  <button class="nav-overlay-close" onclick="document.getElementById('navOverlay').classList.remove('open')">✕</button>
+  <a href="Leadership.html"    onclick="document.getElementById('navOverlay').classList.remove('open')">Leadership</a>
+  <a href="Volunteer.html" onclick="document.getElementById('navOverlay').classList.remove('open')">Volunteer</a>
+  <a href="Elected-Officials.html"    onclick="document.getElementById('navOverlay').classList.remove('open')">Elected Officials</a>
+  <a href="Candidates.html"     onclick="document.getElementById('navOverlay').classList.remove('open')">Candidates</a>
+  <a href="Young-Democrats.html"  onclick="document.getElementById('navOverlay').classList.remove('open')">Young Democrats</a>
+  <a href="https://secure.actblue.com/donate/ydsc_kershaw" target="_blank"   onclick="document.getElementById('navOverlay').classList.remove('open')">Donate</a>
+  
+  <a href="https://scvotes.gov/voters/register-to-vote/" target="_blank" class="cta">Register to Vote</a>
+</div>
+
+<!-- introduction -->
+<section class="introduction" id="home">
+  <div class="introduction-left" style="background-image: linear-gradient(rgba(17, 77, 144, 0.70), rgba(17, 77, 144, 0.95)), url('Images/Young Democrats Group Photo.jpg'); background-size: cover; background-position: center;">
+    <div class="introduction-tag"><span class="dot"></span>Animis Opibusque Parati !</div>
+    <h1>The Next<br>Generation Of<br><em>Leaders</em></h1>
+    <p class="introduction-sub" style="color: white;">The young liberals, social democrats, progressives, fiscal liberals, centrists, and democratic socialists between the ages of fourteen (14) and thirty-five (35) residing in Kershaw County.</p>
+    <div class="introduction-btns">
+      <a href="#join" class="btn btn-gold">Join Us →</a>
+      <a href="https://www.mobilize.us/?org_ids=9634" target="_blank" class="btn btn-ghost">Follow SCYD On Mobilize →</a>
+    </div>
+    <div class="introduction-footnote" style="border-top: 1px solid white;">
+      <strong style="color: white;">"Fighting For A New Carolina"</strong><br>
+    </div>
+  </div>
+  <div class="introduction-right">
+    <!-- update these stats with real numbers from your state -->
+    <a href="#kcydleadership">
+      <div class="stat-card red">
+        <div class="label">Working Hard To Build The Future!</div>
+        <div class="value">Chapter Leadership</div>
+        <div class="desc">The young leaders of Kershaw County and South Carolina.</div>
+      </div>
+    </a>
+    <a href="#committee">
+      <div class="stat-card blue">
+        <div class="label">Help Us Spread Democracy!</div>
+        <div class="value">Get Involved</div>
+        <div class="desc">Join our chapter leadership, organize an event, or join a statewide committee.</div>
+      </div>
+    </a>
+    <a href="#join">
+      <div class="stat-card gold">
+        <div class="label">Liberté, Égalité, Fraternité!</div>
+        <div class="value">Join The Young Democrats</div>
+        <div class="desc">Meet likeminded energetic and principled fellow Young Dems.</div>
+      </div>
+    </a>
+    <a href="https://secure.actblue.com/donate/ydsc_kershaw" target="_blank">
+      <div class="stat-card green">
+        <div class="label">Pizza Is A Great Tool To Mobilize Hungery Youth!</div>
+        <div class="value">Donate To The Young Democrats</div>
+        <div class="desc">To support youth engagement in the political process.</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- scrolling ticker -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="sep">🌴</span>Register to Vote</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Camden</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Get Involved</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Elgin</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Democratic Women</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Bethune</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Register. Organize. Win.</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Lugoff</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Young Democrats</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Westville</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Democratic Men</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Boykin</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Principles</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Cassatt</span>
+    <span class="ticker-item"><span class="sep">🌴</span>Change</span>
+    <span class="ticker-item"><span class="sep">🫏</span>Liberty Hill</span>
+  </div>
+</div>
+
+<!-- KCYD Leadership -->
+<section class="section dark" id="kcydleadership">
+  <div class="container">
+    <div class="flex-between mb-36">
+      <div>
+        <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Join Our</span></div>
+        <h2 class="heading" class="h-lg h-white" style="color: white;">Kershaw County Young Leadership</h2>
+      </div>
+    </div>
+    <div class="platform-grid" style="grid-template-columns: repeat(3, 1fr); text-align: center;">
+      <!-- CONOR ROM -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Candidates/ConorRom.png" alt="Photo of Kershaw County Young Democrat President Conor X Rom">
+        </div>
+        <h3>Conor X. Rom</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">KCYD President</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+          <a href="https://www.facebook.com/ConorXRom" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Facebook</a>
+          |
+          <a href="https://www.instagram.com/conorxrom/" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Instagram</a>
+        </p>
+      </div>    
+      <!-- VICE PRESIDENT -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Images/The Young Democrats of Kershaw County.png" alt="">
+        </div>
+        <h3>Vacant</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">KCYD Vice President</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+          
+        </p>
+      </div>
+      <!-- HIGH SCHOOL PRESIDENT-->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Images/The Young Democrats of Kershaw County.png" alt="">
+        </div>
+        <h3>Vacant</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">KCYD Central Carolina President</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+        </p>
+      </div>
+      <!-- HIGH SCHOOL PRESIDENT-->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Images/The Young Democrats of Kershaw County.png" alt="">
+        </div>
+        <h3>Vacant</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">KCYD Highschool President</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+        </p>
+      </div>
+      <!-- SOCIAL MEDIA DIRECTOR-->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Images/The Young Democrats of Kershaw County.png" alt="">
+        </div>
+        <h3>Vacant</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">KCYD Social Media Director</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+        </p>
+      </div>
+      <!-- SECRETARY -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Images/The Young Democrats of Kershaw County.png" alt="">
+        </div>
+        <h3>Vacant</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">KCYD Secretary</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Statewide Leadership -->
+<section class="section dark" style="padding-top: 0px;" id="scydleadership">
+  <div class="container">
+    <div class="flex-between mb-36">
+      <div>
+        <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Check Out Our</span></div>
+        <h2 class="heading" class="h-lg h-white" style="color: white;">Statewide Young Democratic Leadership</h2>
+      </div>
+    </div>
+    <div class="platform-grid" style="grid-template-columns: repeat(3, 1fr); text-align: center;">
+      <!-- TRAVON JOHNSON -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Candidates/TravonJohnson.png" alt="Photo of Travon Johnson">
+        </div>
+        <h3>Travon Johnson</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">SCYD President</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+          <a href="https://www.facebook.com/vonsj" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Facebook</a>
+          |
+          <a href="https://www.instagram.com/j.tra__/" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Instagram</a>
+        </p>
+      </div>    
+      <!-- WALTER REED -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Candidates/WalterReed.png" alt="Photo of Walter Reed">
+        </div>
+        <h3>Walter Reed</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">KCYD Vice President</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+        <a href="https://www.facebook.com/walter.a.c.reed" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+        Facebook</a>
+        |
+        <a href="https://www.instagram.com/walt.intl" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+        Instagram</a>
+        </p>
+      </div>
+      <!-- CONOR ROM -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Candidates/ConorRom.png" alt="Photo of Kershaw County Young Democrat President Conor X Rom">
+        </div>
+        <h3>Conor X. Rom</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">KCYD SC-05 Representative</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+          <a href="https://www.facebook.com/ConorXRom" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Facebook</a>
+          |
+          <a href="https://www.instagram.com/conorxrom/" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Instagram</a>
+        </p>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<!-- Local Organizations -->
+<section class="section dark" style="padding-top: 0px;" id="localorganizations">
+  <div class="container">
+    <div class="flex-between mb-36">
+      <div>
+        <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Nearby Fellow</span></div>
+        <h2 class="heading" class="h-lg h-white" style="color: white;">Young Democrat Organizations</h2>
+      </div>
+    </div>
+    <div class="platform-grid" style="grid-template-columns: repeat(3, 1fr); text-align: center;">
+      <!-- SOUTH CAROLINA YOUNG DEMOCRATS -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Images/YDSC.jpg" alt="Young Democrats of South Carolina Logo">
+        </div>
+        <h3>South Carolina Young Democrats</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">Statewide Young</br>Democrats</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+          <a href="https://www.facebook.com/youngdemsofsc" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Facebook</a>
+          |
+          <a href="https://www.instagram.com/ydemsofsc/" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Instagram</a>
+        </p>
+      </div>    
+      <!-- CENTRAL MIDLANDS -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Images/Central Midlands Young Democrats.jpg" alt="Central Midlands Young Democrats Logo">
+        </div>
+        <h3>Central Midlands Young Democrats</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">Richland, Lexington, Orangeburg, & Fairfield</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+        <a href="https://ydofcm.com/" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Website</a>
+          |
+          <a href="https://www.facebook.com/YDofCM" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Facebook</a>
+          |
+          <a href="https://www.instagram.com/ydofcm/" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Instagram</a>
+        </p>
+      </div>
+      <!-- SUMTER, LEE, CLARENDON -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Images/Sumter Lee Clarendon Young Democrats.png" alt="Sumter, Lee, Clarendon Young Democrats Logo">
+        </div>
+        <h3>Sumter, Lee, & Clarendon Young Democrats</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">Sumter, Lee, &</br> Clarendon</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+          <a href="https://www.ydslc.org/" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Website</a>
+          |
+          <a href="https://www.facebook.com/profile.php?id=61560838904972" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Facebook</a>
+          |
+          <a href="https://www.instagram.com/ydslc/" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Instagram</a>
+        </p>
+      </div>
+      <!-- LANCASTER -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Images/Lancaster Democratic Party.jpg" alt="Lancaster Democratic Party Logo">
+        </div>
+        <h3>Lancaster Young Democrats</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">Lancaster (Under Development)</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+          <a href="https://www.lancasterdemocrats.com/" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Website</a>
+          |
+          <a href="https://www.facebook.com/LancasterSCDems" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Facebook</a>
+          |
+          <a href="https://www.instagram.com/lancasterscdems/" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Instagram</a>
+        </p>
+      </div>
+      <!-- CHESTERFIELD -->
+      <div class="pillar">
+        <div class="portraits">
+          <img src="Images/Chesterfield Democratic Party.jpg" alt="Chesterfield Democratic Party Logo">
+        </div>
+        <h3>Chesterfield Young Democrats</h3>
+        <span class="pillar-tag" style="font-size: 15px; margin-bottom: 0px;">Chesterfield (Under Development)</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; margin-bottom: 0px;">
+          <a href="https://www.facebook.com/ChesterfieldCountyDemocraticParty" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.65; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+          Facebook</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- committees -->
+<section class="section" id="committee">
+  <div class="container">
+    <div class="flex-between mb-36">
+      <div>
+        <div class="eyebrow blue"><div class="eyebrow-line"></div><span class="eyebrow-text">Join A</span></div>
+        <h2 class="heading" class="h-lg h-white">Young Democrats of South Carolina Committee</h2>
+      </div>
+    </div>
+    <div class="platform-grid" style="grid-template-columns: repeat(3, 1fr); text-align: center;">
+      <!-- Voter Mobilization Committee-->
+      <div class="pillar" style="background: var(--bg);">
+        <span class="pillar-icon">🗳️</span>
+        <h3 style="color: black;">Voter Mobilization Committee</h3>
+        <span class="pillar-tag" style="margin-bottom: 0px;">Registering Voters · Sharing Election Information · Mobilizing Young Voters</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: black;">
+          Chair: <span style="color: #4A86C8">Jessica Thomas (Richland)</span>
+        </p>
+
+        <a href="404.html" target="_blank" class="btn btn-navy btn-sm" style="background-color: #4A86C8;">Join The Committee →</a>
+      </div>
+      <!-- Convention Committee-->
+      <div class="pillar" style="background: var(--bg);">
+        <span class="pillar-icon">🎫</span>
+        <h3 style="color: black;">Convention Committee</h3>
+        <span class="pillar-tag" style="margin-bottom: 0px;">Yearly Convention · Guest Speakers · </br>Event Planning</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: black;">
+          Chair: <span style="color: #f9a825">Jessie Cave (Clarendon)</span>
+        </p>
+
+        <a href="404.html" target="_blank" class="btn btn-navy btn-sm" style="background-color: #f9a825;">Join The Committee →</a>
+      </div>
+      <!-- International Committee-->
+      <div class="pillar" style="background: var(--bg);">
+        <span class="pillar-icon">🌎</span>
+        <h3 style="color: black;">International Committee</h3>
+        <span class="pillar-tag" style="margin-bottom: 0px;">Diplomacy · Trade & Culture · </br>World Politics</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: black;">
+          Chair: <span style="color: #e53935">Conor Rom (Kershaw)</span>
+        </p>
+
+        <a href="404.html" target="_blank" class="btn btn-navy btn-sm" style="background-color: #e53935;">Join The Committee →</a>
+      </div>
+      <!-- Finance Committee-->
+      <div class="pillar" style="background: var(--bg);">
+        <span class="pillar-icon">📈</span>
+        <h3 style="color: black;">Finance Committee</h3>
+        <span class="pillar-tag" style="margin-bottom: 0px;">Fundraising · Entrepreneurship · Trade & Commerce</span>
+        </br>
+        <hr>
+        </br>
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: black;">
+          Chair: <span style="color: #4A86C8">Conor Rom (Kershaw)</span>
+        </p>
+
+        <a href="404.html" target="_blank" class="btn btn-navy btn-sm" style="background-color: #4A86C8;">Join The Committee →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- donate -->
+<section class="section bg-red-grad" id="donate">
+  <div class="container">
+    <div class="donate-long">
+      <div>
+        <h2>Become A Dues Paying<span> YDSC Member</span></h2>
+        <p>For $35 annually you can become a due paying member of the Kershaw County Young Democrats and South Carolina Young Democrats. Dues paying members get a YDSC/KCYD t-shirts, other democratic goodnies, access to explusive YDSC events and deals, and much more. The majority of your annual dues go straight into our Chapter Fund to support our organizing here in Kershaw County.
+        </br>
+        </br>
+
+        <div class="donate-btns">
+          <a href="https://secure.actblue.com/donate/ydsc_kershaw" target="_blank" class="btn btn-gold">Become A Dues Paying Member via ActBlue →</a>
+        </div>
+      </div>
+    
+      <!-- 
+      
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- join -->
+<section class="section navy" id="join">
+  <div class="container">
+    <div class="join-wrap">
+
+      <!-- LEFT SIDE -->
+      <div>
+        <div class="eyebrow">
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-text">Get Involved</span>
+        </div>
+
+        <h2>
+          Join The<br>
+          Young Democrats of<br>
+          <span>Kershaw County</span>
+        </h2>
+
+        <p>
+          Are you a resident of Kershaw County and between the ages of fourteen (14) and thirty-five (35)? Join the Kershaw County Young Democrats today!
+        </p>
+
+        <ul class="join-perks">
+          <li>Youth Events and Socials</li>
+          <li>Voter Registration Drives</li>
+          <li>Candidate Forums and Town Halls</li>
+          <li>Growth and Leadership Opportunities</li>
+          <li>Get Involved with Local Government</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT SIDE: FORM -->
+      <div class="join-form-wrap">
+
+        <h3>Join the Kershaw County Young Democrats</h3>
+
+        <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSfXV3FO8YQFcQzAiVRNMeFLuqgHX2kbHuJEwxz2FW7z1fYp3w/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+          <div class="field">
+            <label for="first-name">First Name*</label>
+            <input type="text" id="first-name" name="entry.515277337" placeholder="Your first name" maxlength="45" required >
+          </div>
+
+          <div class="field">
+            <label for="last-name">Last Name*</label>
+            <input type="text" id="last-name" name="entry.830849319" placeholder="Your last name" maxlength="45" required >
+          </div>
+          <div class="field">
+            <label for="last-name">Birthday (Optional) (Required For Young Democrat Membership)*</label>
+            <input type="date" id="email" name="entry.791018556" placeholder="mm/dd/yyyy" maxlength="45" required >
+          </div>
+
+          <div class="field">
+            <label for="last-name">Email*</label>
+            <input type="text" id="email" name="entry.1242446096" placeholder="your@email.com" maxlength="45" required >
+          </div>
+
+          <div class="field">
+            <label for="last-name">Phone (Optional)</label>
+            <input type="text" id="phone" name="entry.1983472911" placeholder="XXX-XXX-XXXX" maxlength="45">
+          </div>
+
+          <div class="field">
+            <label for="address">Address (Optional)</label>
+            <input type="text" id="address" name="entry.380339507" placeholder="Your address" maxlength="45">
+          </div>
+
+          <!-- 
+          <div class="field">
+            <label for="status">Status</label>
+            <select id="status" name="entry.299159923">
+              <option value="" disabled selected>Select your status</option>
+              <option value="Student">Student</option>
+              <option value="Alumni">Alumni</option>
+              <option value="Faculty">Faculty</option>
+              <option value="Friend">Friend</option>
+            </select>
+          </div>
+          -->
+
+          <button
+            type="submit"
+            class="btn btn-gold btn-full mt-8"
+          >
+            Join The Young Democrats →
+          </button>
+
+        </form>
+
+
+        <!-- HIDDEN GOOGLE FORM IFRAME -->
+        <iframe
+          name="hidden_iframe"
+          id="hidden_iframe"
+          style="display:none;"
+          onload="if(submitted) { formSubmittedJoin(); }"
+        ></iframe>
+
+        <!-- SUCCESS MESSAGE -->
+        <p id="success-message" class="success" style="display:none; margin-top: 20px;">
+          Thank you for joining the Young Democrats! A great way to stay up to date on all Kershaw County Democratic events is to follow us on <a href="https://www.facebook.com/KershawCountyDemocrats/" target="_blank">Facebook</a> or <a href="https://www.instagram.com/KershawCountyDemocrats/" target="_blank">Instagram</a>!
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  var submitted = false;
+
+  function formSubmittedJoin() {
+    document.getElementById("gform").style.display = "none";
+    document.getElementById("success-message").style.display = "block";
+  }
+</script>
+
+<!-- social links -->
+<div class="social-bar">
+  <div class="social-bar-inner">
+    <span class="social-bar-label">Follow Us On:</span>
+    <a href="https://www.facebook.com/KershawCountyDemocrats/" target="_blank" class="social-link">📱 Facebook</a>
+    <a href="https://www.facebook.com/groups/KershawCountyDemocraticWomen" target="_blank" class="social-link">📱 Facebook Group</a>
+    <a href="https://www.instagram.com/KershawCountyDemocrats/" target="_blank" class="social-link">📸 Instagram</a>
+    <a href="https://KershawCountyDemocrats.substack.com/" target="_blank" class="social-link">📝 Substack</a>
+  </div>
+</div>
+
+<!-- footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="name">Kershaw County Democratic Party</div>
+        <span class="region">Camden · Elgin · Bethune · Lugoff · Westville · Boykin · Cassatt · Liberty Hill</span>
+        <p>Building a stronger Kershaw County through grassroots organizing, community engagement, voter outreach, and electing Democrats at every level in South Carolina.</p>
+        <div class="tagline">"Life, Liberty and the pursuit of Happiness." - The Declaration of Independence</div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="Leadership.html">Leadership</a>
+        <a href="Bylaws.html">Bylaws</a>
+        <a href="Elected-Officials.html">Elected Officials</a>
+        <a href="Candidates.html">Our Candidates</a>
+        <a href="Young-Democrats.html">Young Democrats</a>
+        <a href="index.html #contact">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <a href="index.html #join">Join Us!</a>
+        <a href="Volunteer.html" target="_blank">Volunteer</a>
+        <a href="Volunteer.html" target="_blank">Join A Committee</a>
+        <a href="https://secure.actblue.com/donate/kershaw-county-democratic-party-1" target="_blank">Donate via ActBlue</a>
+        <a href="https://kershawcountydemocrats.substack.com/subscribe" target="_blank">Newsletter</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="https://scvotes.gov/voters/register-to-vote/" target="_blank">Register to Vote</a>
+        <a href="index.html #voter" target="_blank">Voter Resources</a>
+        <a href="https://scdp.org/" target="_blank">South Carolina Democratic Party</a>
+        <a href="https://www.youngdemssc.org/" target="_blank">South Carolina Young Democrats</a>
+        <a href="https://www.kershaw.sc.gov/" target="_blank">Kershaw County Government</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>KershawSCDems@gmail.com | PO Box 65, Camden, SC 29020 | © Kershaw County Democratic Party. All rights reserved.</p>
+      <span><a href="https://www.facebook.com/ConorXRom/" target="_blank" style="color: rgba(255,255,255,0.18);">🛠️ Website Maintained by Conor X. Rom</a></span>
+    </div>
+    <p class="footer-legal">Paid for by the Kershaw County Democratic Party. Affiliated with the South Carolina Democratic Party and the South Carolina Young Democrats. Not authorized by any candidate or candidate's committee.</p>
+  </div>
+</footer>
+
+<!-- mobile bottom bar -->
+<div class="sticky-bar">
+  <a href="[REGISTER_VOTE_URL]" target="_blank" class="s-reg">Register to Vote</a>
+  <a href="#join" class="s-join">Join Us →</a>
+</div>
+
+<script>
+// close mobile menu when clicking outside
+document.getElementById('navOverlay').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('open');
+});
+
+// substack rss auto-load — replace [SUBSTACK_URL] before deploying
+async function loadPosts() {
+  try {
+    const url = '[SUBSTACK_URL]';
+    const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=' + url + '/feed');
+    const data = await res.json();
+    if (!data.items?.length) return;
+    const f = data.items[0];
+    document.querySelector('.blog-main-body h3').textContent = f.title;
+    document.querySelector('.blog-main-body p').textContent = f.description.replace(/<[^>]*>/g,'').substring(0,150) + '...';
+    document.querySelector('.blog-main-body a').href = f.link;
+    const minis = document.querySelectorAll('.blog-mini');
+    for (let i = 0; i < Math.min(4, data.items.length - 1); i++) {
+      const m = minis[i];
+      if (!m) continue;
+      m.querySelector('h4').textContent = data.items[i+1].title;
+      m.onclick = () => window.open(data.items[i+1].link, '_blank');
+    }
+  } catch(e) { /* shows placeholder content if rss fails */ }
+}
+loadPosts();
+</script>
+
+
+<!-- Contact Script -->
+<script>
+  var submitted = false;
+
+  function formSubmitted() {
+    document.getElementById("gformcontact").style.display = "none";
+    document.getElementById("success-message-contact").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
