@@ -423,6 +423,7 @@ footer { background: #050e1c; padding: 52px 48px 24px; }
 @media (max-width: 1024px) {
   .grid-4, .stats-grid, .voter-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .region { display: none; }
 }
 
 @media (max-width: 768px) {
