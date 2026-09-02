@@ -393,7 +393,10 @@ nav {
 /* social bar */
 .social-bar { background: var(--dark); padding: 26px 48px; border-top: 3px solid #f9a825; }
 .social-bar-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
-.social-bar-label { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-right: 6px; }
+.social-bar-label { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-right: 0;       /* CHANGED */
+  margin-bottom: 4px;    /* ADDED */
+  width: 100%;           /* ADDED */
+  text-align: center;    /* ADDED */}
 .social-link { display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); color: rgba(255,255,255,0.7); padding: 8px 16px; border-radius: 7px; font-size: 13px; font-weight: 600; transition: background .15s, color .15s; }
 .social-link:hover { background: rgba(17,81,166,0.22); color: #fff; }
 .social-link.inactive { opacity: 0.35; cursor: default; pointer-events: none; }
