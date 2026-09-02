@@ -187,7 +187,7 @@ nav {
 
 /* portrait */
 .portraits img {width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
-.portraits {width: 7.5vw; height: 7.5vw; border-radius: 50%; overflow: hidden; display: inline-block; margin-bottom: 10px; }
+.portraits {width: 120px; height: 120px; border-radius: 50%; overflow: hidden; display: inline-block; margin-bottom: 10px; }
 .pillar:nth-child(3n + 1) .portraits { border: 0.3vw solid #4A86C8; }
 .pillar:nth-child(3n + 2) .portraits { border: 0.3vw solid #f9a825; }
 .pillar:nth-child(3n) .portraits {  border: 0.3vw solid #e53935; }
