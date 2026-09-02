@@ -321,6 +321,7 @@ nav {
 
 /* blog */
 .blog-wrap { display: grid; grid-template-columns: 3fr 2fr; gap: 20px; }
+.countycommissions-wrap { display: grid; grid-template-columns: 2fr 2fr; gap: 20px; }
 .blog-main { border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.03); }
 .blog-main:hover { border-color: #f9a825; }
 .blog-main-img { height: 190px; background: linear-gradient(135deg, var(--navy), var(--blue)); display: flex; align-items: flex-end; padding: 20px; }
@@ -439,7 +440,7 @@ footer { background: #050e1c; padding: 52px 48px 24px; }
   .introduction-btns { flex-direction: column; }
   .introduction-btns .btn { width: 100%; text-align: center; }
   .grid-2, .origin-wrap, .join-wrap, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-  .grid-3, .platform-grid, .county-grid, .event-grid, .volunteer-grid, .blog-wrap { grid-template-columns: 1fr; }
+  .grid-3, .platform-grid, .county-grid, .event-grid, .volunteer-grid, .blog-wrap, .countycommissions-wrap { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .voter-grid { grid-template-columns: 1fr; }
   .events-header { flex-direction: column; align-items: flex-start; gap: 14px; }
