@@ -15,6 +15,11 @@ a { text-decoration: none; }
   --gray:   #5A6A85;
   --border: #dce9f5;
   --bg:     #f4f7fc;
+  --greendarker: #2a762eb3;
+  --green: #2a762ef2;
+
+  --redlighter: #d12032b3;
+  --red: #BF0A30;
 }
 
 /* typography */
@@ -261,6 +266,9 @@ nav {
 .event-btns .secondary { background: rgba(255,255,255,0.07); border: 1px solid rgba(201,151,42,0.35); color: #F0BA4A; }
 .event-btns.blue .primary { background: linear-gradient(135deg, var(--navy), var(--blue)); color: #ffffff; }
 .event-btns.blue .secondary { background: rgba(255,255,255,0.07); border: 1px solid var(--navy); color: var(--blue); }
+.event-btns.green .primary { background: linear-gradient(135deg, var(--greendarker), var(--green)); color: #ffffff; }
+.event-btns.red .primary { background: linear-gradient(135deg, var(--redlighter), var(--red)); color: #ffffff; }
+
 
 .mobilize-bar { background: #e8f0f9; border: 1px solid var(--border); border-radius: 12px; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; margin-top: 22px; gap: 16px; }
 .mobilize-bar p { font-size: 14px; color: var(--navy); font-weight: 600; }
