@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive World Country Map</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1220;
+            color: white;
+        }
+
+        header {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+            background: #111a2e;
+            border-bottom: 1px solid #263451;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        #search {
+            width: 260px;
+            padding: 11px 14px;
+            border: 1px solid #394867;
+            border-radius: 8px;
+            background: #18243b;
+            color: white;
+            outline: none;
+        }
+
+        #search::placeholder {
+            color: #9aa8c4;
+        }
+
+        #map {
+            width: 100%;
+            height: calc(100vh - 70px);
+        }
+
+        /* Country and state hover effects */
+
+        .country,
+        .state {
+            transition: all 0.15s ease;
+            cursor: pointer;
+        }
+
+        /* Popup */
+
+        .leaflet-popup-content-wrapper {
+            background: #111a2e;
+            color: white;
+            border-radius: 12px;
+        }
+
+        .leaflet-popup-tip {
+            background: #111a2e;
+        }
+
+        .leaflet-popup-content {
+            margin: 18px;
+            min-width: 220px;
+        }
+
+        .popup-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #60a5fa;
+        }
+
+        .popup-row {
+            margin: 7px 0;
+            color: #d7deed;
+        }
+
+        .popup-label {
+            font-weight: bold;
+            color: white;
+        }
+
+        .leaflet-container {
+            background: #07101f;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                height: auto;
+                padding: 15px;
+                gap: 10px;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            #search {
+                width: 100%;
+            }
+
+            #map {
+                height: calc(100vh - 115px);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>🌎 Interactive World Map</h1>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search for a country or state..."
+    >
+</header>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+
+/*
+============================================================
+MAP SETUP
+============================================================
+*/
+
+const map = L.map("map", {
+    minZoom: 2,
+    maxZoom: 7,
+    worldCopyJump: true
+}).setView([20, 0], 2);
+
+
+/*
+============================================================
+CARTO DARK BASEMAP
+============================================================
+
+This uses CARTO's standard dark basemap URL.
+
+The standard public basemap URL does not require the
+CARTO API key. If your CARTO account provides a different
+authenticated tile URL, use the exact URL supplied by CARTO.
+*/
+
+const CARTO_API_KEY = "cb1_4gnn_1_328806f892dc1a5ffc971f7e";
+
+    L.tileLayer(
+        `https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=${encodeURIComponent(CARTO_API_KEY)}`,
+        {
+            subdomains: "abcd",
+            minZoom: 0,
+            maxZoom: 20,
+
+            attribution:
+                '&copy; <a href="https://www.openstreetmap.org/copyright">' +
+                'OpenStreetMap</a> contributors, ' +
+                '&copy; <a href="https://carto.com/attributions/">' +
+                'CARTO</a>'
+        }
+    ).addTo(map);
+
+
+/*
+============================================================
+COUNTRY DATA
+============================================================
+
+Add your own information here.
+*/
+
+const countryData = {
+
+    "United States of America": {
+        capital: "Washington, D.C.",
+        population: "Approx. 340 million",
+        continent: "North America",
+        description:
+            "The United States is a federal republic consisting of 50 states."
+    },
+
+    "Canada": {
+        capital: "Ottawa",
+        population: "Approx. 40 million",
+        continent: "North America",
+        description:
+            "Canada is the second-largest country in the world by land area."
+    },
+
+    "Brazil": {
+        capital: "Brasília",
+        population: "Approx. 216 million",
+        continent: "South America",
+        description:
+            "Brazil is the largest country in South America."
+    },
+
+    "United Kingdom": {
+        capital: "London",
+        population: "Approx. 68 million",
+        continent: "Europe",
+        description:
+            "The United Kingdom consists of England, Scotland, Wales and Northern Ireland."
+    },
+
+    "France": {
+        capital: "Paris",
+        population: "Approx. 68 million",
+        continent: "Europe",
+        description:
+            "France is a country in Western Europe."
+    },
+
+    "Germany": {
+        capital: "Berlin",
+        population: "Approx. 84 million",
+        continent: "Europe",
+        description:
+            "Germany is a federal republic in Central Europe."
+    },
+
+    "India": {
+        capital: "New Delhi",
+        population: "Approx. 1.4 billion",
+        continent: "Asia",
+        description:
+            "India is one of the world's most populous countries."
+    },
+
+    "China": {
+        capital: "Beijing",
+        population: "Approx. 1.4 billion",
+        continent: "Asia",
+        description:
+            "China is a country in East Asia."
+    },
+
+    "Japan": {
+        capital: "Tokyo",
+        population: "Approx. 124 million",
+        continent: "Asia",
+        description:
+            "Japan is an island country in East Asia."
+    },
+
+    "Australia": {
+        capital: "Canberra",
+        population: "Approx. 27 million",
+        continent: "Oceania",
+        description:
+            "Australia is both a country and a continent."
+    },
+
+    "South Africa": {
+        capital: "Pretoria / Cape Town / Bloemfontein",
+        population: "Approx. 63 million",
+        continent: "Africa",
+        description:
+            "South Africa is located at the southern tip of Africa."
+    },
+
+    "Egypt": {
+        capital: "Cairo",
+        population: "Approx. 114 million",
+        continent: "Africa",
+        description:
+            "Egypt is located in northeastern Africa."
+    },
+
+    "Mexico": {
+        capital: "Mexico City",
+        population: "Approx. 130 million",
+        continent: "North America",
+        description:
+            "Mexico is a country in the southern portion of North America."
+    },
+
+    "Argentina": {
+        capital: "Buenos Aires",
+        population: "Approx. 46 million",
+        continent: "South America",
+        description:
+            "Argentina is located in the southern part of South America."
+    }
+
+};
+
+
+/*
+============================================================
+COUNTRY STYLE
+============================================================
+*/
+
+function normalStyle() {
+
+    return {
+        fillColor: "#475569",
+        weight: 1,
+        opacity: 1,
+        color: "#94a3b8",
+        fillOpacity: 0.65
+    };
+
+}
+
+
+function hoverStyle() {
+
+    return {
+        fillColor: "#f59e0b",
+        weight: 2,
+        color: "#ffffff",
+        fillOpacity: 0.9
+    };
+
+}
+
+
+/*
+============================================================
+STATE STYLE
+============================================================
+
+The state polygons have a nearly transparent fill.
+This allows the country color underneath to remain visible
+while showing the individual state boundaries.
+*/
+
+function normalStateStyle(feature) {
+
+    const stateName = feature.properties.name;
+
+    const stateColors = {
+
+        "South Carolina": "#b08a45",
+        "North Carolina": "#2563eb",
+        "Georgia": "#dc2626",
+        "Florida": "#16a34a",
+        "Virginia": "#9333ea",
+        "New York": "#0891b2"
+
+    };
+
+    return {
+        fillColor: stateColors[stateName] || "#475569", //"#2563eb"
+        weight: 1,
+        opacity: 1,
+        color: "#94a3b8", //"#93c5fd"
+        fillOpacity: 0.65
+    };
+
+}
+
+
+function hoverStateStyle() {
+
+    return {
+        fillColor: "#f59e0b",
+        weight: 2,
+        opacity: 1,
+        color: "#ffffff",
+        fillOpacity: 0.4
+    };
+
+}
+
+
+/*
+============================================================
+GLOBAL LAYER VARIABLES
+============================================================
+*/
+
+let countryLayer;
+let stateLayer;
+
+
+/*
+============================================================
+POPUP: COUNTRY
+============================================================
+*/
+
+function showCountryPopup(countryName, layer, latlng) {
+
+    const info = countryData[countryName];
+
+    let popupHTML = `
+        <div class="popup-title">
+            ${countryName}
+        </div>
+    `;
+
+    if (info) {
+
+        popupHTML += `
+            <div class="popup-row">
+                <span class="popup-label">Capital:</span>
+                ${info.capital}
+            </div>
+
+            <div class="popup-row">
+                <span class="popup-label">Population:</span>
+                ${info.population}
+            </div>
+
+            <div class="popup-row">
+                <span class="popup-label">Continent:</span>
+                ${info.continent}
+            </div>
+
+            <div class="popup-row">
+                ${info.description}
+            </div>
+        `;
+
+    } else {
+
+        popupHTML += `
+            <div class="popup-row">
+                Information for this country
+                has not been added yet.
+            </div>
+        `;
+
+    }
+
+    L.popup({
+        maxWidth: 350
+    })
+    .setLatLng(latlng || layer.getBounds().getCenter())
+    .setContent(popupHTML)
+    .openOn(map);
+
+}
+
+
+/*
+============================================================
+POPUP: STATE
+============================================================
+*/
+
+function showStatePopup(stateName, layer, latlng) {
+
+    const popupHTML = `
+        <div class="popup-title">
+            ${stateName}
+        </div>
+
+        <div class="popup-row">
+            <span class="popup-label">Country:</span>
+            United States of America
+        </div>
+
+        <!--
+        <div class="popup-row">
+            State information can be added here.
+        </div>
+        -->  
+      `;
+
+    L.popup({
+        maxWidth: 350
+    })
+    .setLatLng(latlng || layer.getBounds().getCenter())
+    .setContent(popupHTML)
+    .openOn(map);
+
+}
+
+
+/*
+============================================================
+LOAD COUNTRY AND STATE BORDERS
+============================================================
+
+Both datasets load when the page opens.
+
+The country layer is added first.
+The state layer is added second, ensuring that the
+individual state borders appear above the USA polygon.
+*/
+
+const countryURL =
+    "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson";
+
+const stateURL =
+    "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json";
+
+
+Promise.all([
+
+    fetch(countryURL).then(response => {
+        if (!response.ok) {
+            throw new Error("Could not load country boundaries.");
+        }
+        return response.json();
+    }),
+
+    fetch(stateURL).then(response => {
+        if (!response.ok) {
+            throw new Error("Could not load state boundaries.");
+        }
+        return response.json();
+    })
+
+])
+
+.then(([countryDataGeoJSON, stateDataGeoJSON]) => {
+
+
+    /*
+    ========================================================
+    LOAD COUNTRY BORDERS
+    ========================================================
+    */
+
+    countryLayer = L.geoJSON(countryDataGeoJSON, {
+
+        style: normalStyle,
+
+        onEachFeature: function(feature, layer) {
+
+            const countryName =
+                feature.properties.ADMIN ||
+                feature.properties.name ||
+                feature.properties.NAME ||
+                "Unknown Country";
+
+
+            layer.options.className = "country";
+
+
+            /*
+            HOVER
+            */
+
+            layer.on("mouseover", function() {
+
+                this.setStyle(hoverStyle());
+
+                this.bindTooltip(countryName, {
+                    sticky: true,
+                    direction: "top"
+                }).openTooltip();
+
+            });
+
+
+            layer.on("mouseout", function() {
+
+                this.setStyle(normalStyle());
+
+                this.closeTooltip();
+
+            });
+
+
+            /*
+            CLICK
+            */
+
+            layer.on("click", function(e) {
+
+                map.fitBounds(e.target.getBounds(), {
+                    padding: [50, 50],
+                    maxZoom: 5
+                });
+
+                showCountryPopup(
+                    countryName,
+                    layer,
+                    e.latlng
+                );
+
+            });
+
+        }
+
+    }).addTo(map);
+
+
+
+    /*
+    ========================================================
+    LOAD U.S. STATES AUTOMATICALLY
+    ========================================================
+
+    This is the important addition.
+
+    The state layer is loaded immediately when the map
+    opens. It is not dependent on clicking the USA first.
+
+    It remains visible while browsing other countries.
+    */
+
+    stateLayer = L.geoJSON(stateDataGeoJSON, {
+
+        style: normalStateStyle,
+
+        onEachFeature: function(feature, layer) {
+
+            const stateName =
+                feature.properties.name ||
+                feature.properties.NAME ||
+                feature.properties.state ||
+                "Unknown State";
+
+
+            layer.options.className = "state";
+
+
+            /*
+            HOVER
+            */
+
+            layer.on("mouseover", function() {
+
+                this.setStyle(hoverStateStyle());
+
+                this.bindTooltip(stateName, {
+                    sticky: true,
+                    direction: "top"
+                }).openTooltip();
+
+            });
+
+
+            layer.on("mouseout", function() {
+
+                stateLayer.resetStyle(this);
+
+                this.closeTooltip();
+
+            });
+
+
+            /*
+            CLICK
+            */
+
+            layer.on("click", function(e) {
+
+                map.fitBounds(e.target.getBounds(), {
+                    padding: [50, 50],
+                    maxZoom: 6
+                });
+
+                showStatePopup(
+                    stateName,
+                    layer,
+                    e.latlng
+                );
+
+            });
+
+        }
+
+    }).addTo(map);
+
+
+    /*
+    Keep the state boundaries above the country polygons.
+    */
+
+    stateLayer.bringToFront();
+
+
+    /*
+    ========================================================
+    SEARCH
+    ========================================================
+
+    Search works for both countries and U.S. states.
+
+    State names are checked first. If no state matches,
+    the search checks the country layer.
+    */
+
+    document
+        .getElementById("search")
+        .addEventListener("keydown", function(e) {
+
+            if (e.key !== "Enter") return;
+
+            const searchTerm =
+                this.value.trim().toLowerCase();
+
+            if (!searchTerm) return;
+
+
+            let found = false;
+
+
+            /*
+            SEARCH STATES FIRST
+            */
+
+            stateLayer.eachLayer(function(layer) {
+
+                const stateName =
+                    layer.feature.properties.name ||
+                    layer.feature.properties.NAME ||
+                    layer.feature.properties.state ||
+                    "";
+
+                const normalizedName =
+                    stateName.toLowerCase();
+
+
+                if (
+                    normalizedName === searchTerm ||
+                    normalizedName.includes(searchTerm)
+                ) {
+
+                    found = true;
+
+                    map.fitBounds(
+                        layer.getBounds(),
+                        {
+                            padding: [50, 50],
+                            maxZoom: 6
+                        }
+                    );
+
+                    layer.fire("click", {
+                        latlng: layer.getBounds().getCenter()
+                    });
+
+                }
+
+            });
+
+
+            /*
+            SEARCH COUNTRIES IF NO STATE MATCHES
+            */
+
+            if (!found) {
+
+                countryLayer.eachLayer(function(layer) {
+
+                    const countryName =
+                        layer.feature.properties.ADMIN ||
+                        layer.feature.properties.name ||
+                        layer.feature.properties.NAME ||
+                        "";
+
+                    const normalizedName =
+                        countryName.toLowerCase();
+
+
+                    if (
+                        normalizedName === searchTerm ||
+                        normalizedName.includes(searchTerm)
+                    ) {
+
+                        found = true;
+
+                        map.fitBounds(
+                            layer.getBounds(),
+                            {
+                                padding: [50, 50],
+                                maxZoom: 5
+                            }
+                        );
+
+                        layer.fire("click", {
+                            latlng: layer.getBounds().getCenter()
+                        });
+
+                    }
+
+                });
+
+            }
+
+
+            /*
+            NO RESULTS
+            */
+
+            if (!found) {
+
+                alert(
+                    "No country or state found. Try another search."
+                );
+
+            }
+
+        });
+
+
+})
+
+.catch(error => {
+
+    console.error("Could not load map data:", error);
+
+    alert(
+        "Unable to load the map boundaries. Please check your internet connection and try again."
+    );
+
+});
+
+
+</script>
+
+</body>
+</html>

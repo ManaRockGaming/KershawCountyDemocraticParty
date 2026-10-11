@@ -667,7 +667,7 @@
 </section>
 
 <!-- newsletter -->
-<section class="section light" id="newsletter">
+<section class="section light" id="Newsletter">
   <div class="nl-inner">
     <div class="eyebrow blue center">
       <div class="eyebrow-line"></div>
@@ -675,54 +675,47 @@
     </div>
 
     <h2>Subscribe To Our<span> Newsletter</span></h2>
+    <p>Updates, event alerts, and educational opportunities. No spam — just important news.</p>
 
-    <p>Chapter updates, event alerts, local news, and voting reminders. No spam — just important updates.</p>
+    <form name="gformnewsletter" id="gformnewsletter" action="https://docs.google.com/forms/d/e/1FAIpQLSfXV3FO8YQFcQzAiVRNMeFLuqgHX2kbHuJEwxz2FW7z1fYp3w/formResponse" method="POST" target="hidden_iframe_newsletter" onsubmit="submittedNewsletter=true;">
 
-    <form
-      name="newsletter-form"
-      id="newsletter-form"
-      class="nl-form"
-      action="https://docs.google.com/forms/d/e/1FAIpQLSfXV3FO8YQFcQzAiVRNMeFLuqgHX2kbHuJEwxz2FW7z1fYp3w/formResponse"
-      method="POST"
-      target="newsletter_iframe"
-      onsubmit="newsletterSubmitted = true;"
-    >
-      <input
-        type="email"
-        name="entry.1242446096"
-        id="nl-name"
-        placeholder="Your email"
-        maxlength="45"
-        required
-      >
+      <div class="nl-form">
+        <input type="email" name="entry.1242446096" id="nl-email" placeholder="Your email address..." maxlength="45" required>
+        <button type="submit" class="btn btn-navy">
+          Subscribe →
+        </button>
+      </div>
 
-      <button type="submit" class="btn btn-navy">
-        Subscribe →
-      </button>
+      <p class="nl-note" style="margin-bottom: 0px;">
+        Unsubscribe at any time.
+      </p>
+
     </form>
 
+    <!-- HIDDEN GOOGLE FORM IFRAME -->
     <iframe
-      name="newsletter_iframe"
-      id="newsletter_iframe"
+      name="hidden_iframe_newsletter"
+      id="hidden_iframe_newsletter"
       style="display:none;"
-      onload="if(newsletterSubmitted) { newsletterFormSubmitted(); }"
-    ></iframe>
+      onload="if(submittedNewsletter) { formSubmittedNewsletter(); }">
+    </iframe>
 
-    <p id="newsletter-success" class="success" style="display:none; margin-top:20px;">
-      Thank you for subscribing!
-    </p>
+    <!-- SUCCESS MESSAGE -->
+    <div id="success-message-newsletter"class="success" style="display: none; text-align: center; color: black;">
+      <h3 style="margin-bottom: 0px;">
+        Thank you for subscribing!
+      </h3>
+    </div>
 
-    <p class="nl-note">Contact us to unsubscribe at any time.</p>
   </div>
 </section>
 
 <script>
-  var newsletterSubmitted = false;
+  var submittedNewsletter = false;
 
-  function newsletterFormSubmitted() {
-    newsletterSubmitted = false;
-    document.getElementById('newsletter-form').style.display = 'none';
-    document.getElementById('newsletter-success').style.display = 'block';
+  function formSubmittedNewsletter() {
+    document.getElementById("gformnewsletter").style.display = "none";
+    document.getElementById("success-message-newsletter").style.display = "block";
   }
 </script>
 
@@ -916,10 +909,30 @@
 <div class="social-bar">
   <div class="social-bar-inner">
     <span class="social-bar-label">Follow Us On:</span>
-    <a href="https://www.facebook.com/KershawCountyDemocrats/" target="_blank" class="social-link">📱 Facebook</a>
-    <a href="https://www.facebook.com/groups/KershawCountyDemocraticWomen" target="_blank" class="social-link">📱 Facebook Group</a>
-    <a href="https://www.instagram.com/KershawCountyDemocrats/" target="_blank" class="social-link">📸 Instagram</a>
-    <a href="https://KershawCountyDemocrats.substack.com/" target="_blank" class="social-link">📝 Substack</a>
+    <a href="https://www.facebook.com/KershawCountyDemocrats/" target="_blank" class="social-link">
+      <img src="Images/Icon_Facebook.png" style="width: 16px; height: 16px; object-fit: contain; flex-shrink: 0;" alt="Facebook Link" class="social-icon">
+      Party Facebook Page
+    </a>
+
+    <a href="https://www.facebook.com/groups/KershawCountyDemocraticWomen" target="_blank" class="social-link">
+      <img src="Images/Icon_Facebook.png" style="width: 16px; height: 16px; object-fit: contain; flex-shrink: 0;" alt="Facebook Link" class="social-icon">
+      Party Facebook Group
+    </a>
+
+    <a href="https://www.instagram.com/KershawCountyDemocrats/" target="_blank" class="social-link">
+      <img src="Images/Icon_Instagram.png" style="width: 16px; height: 16px; object-fit: contain; flex-shrink: 0;" alt="Instagram Link" class="social-icon">
+      Party Instagram Page
+    </a>
+
+    <a href="https://ig.me/j/4OjmqZ9pBNzlXDUU/" target="_blank" class="social-link">
+      <img src="Images/Icon_Instagram.png" style="width: 16px; height: 16px; object-fit: contain; flex-shrink: 0;" alt="Instagram Link" class="social-icon">
+      Youth Instagram Group
+    </a>
+
+    <a href="https://www.reddit.com/r/KershawCounty/" target="_blank" class="social-link">
+      <img src="Images/Icon_Reddit.png" style="width: 16px; height: 16px; object-fit: contain; flex-shrink: 0;" alt="Reddit Link" class="social-icon">
+      Kershaw Community Reddit
+    </a>
   </div>
 </div>
 
@@ -936,10 +949,10 @@
       <div class="footer-col">
         <h4>Navigate</h4>
         <a href="Leadership.html">Leadership</a>
-        <a href="Bylaws.html">Bylaws</a>
         <a href="Elected-Officials.html">Elected Officials</a>
         <a href="Candidates.html">Our Candidates</a>
         <a href="Young-Democrats.html">Young Democrats</a>
+        <a href="Privacy-Policy.html">Privacy Policy</a>
         <a href="index.html#contact">Contact Us</a>
       </div>
       <div class="footer-col">
@@ -948,7 +961,6 @@
         <a href="Volunteer.html" target="_blank">Volunteer</a>
         <a href="Volunteer.html" target="_blank">Join A Committee</a>
         <a href="https://secure.actblue.com/donate/kershaw-county-democratic-party-1" target="_blank">Donate via ActBlue</a>
-        <a href="https://kershawcountydemocrats.substack.com/subscribe" target="_blank">Newsletter</a>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
